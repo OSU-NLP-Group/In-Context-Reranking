@@ -1,7 +1,7 @@
 # In-Context-Reranking
 Code and data for paper [Attention in Large Language Models Yields Efficient Zero-Shot Re-Rankers](https://arxiv.org/abs/2410.02642).
 
-We present in-context re-ranking (ICR), an efficient re-ranking method that directly leverages the attention pattern of LLMs for zero-shot re-ranking. By reading the LLM’s mind, ICR dramatically cuts the complexity of re-ranking N documents from O(N)~O(NlogN) down to O(1) with better re-ranking performance, especially on more challenging tasks.
+We present in-context re-ranking (ICR), an efficient re-ranking method that directly leverages the attention pattern of LLMs for zero-shot re-ranking. By reading the LLM’s mind, ICR dramatically cuts the complexity of re-ranking $N$ documents from $O(N)$~$O(N\log N)$ down to O(1) with better re-ranking performance, especially on more challenging tasks.
 
 ![](_asset/ICR_figure.png)
 
@@ -16,22 +16,20 @@ Download ColBERTv2 top-20 retrieval results for multi-hop datasets [here](https:
 Process your own data into the following json format:
 ```json
 [
-	{
-		"idx": "idx will be used to retrieve qrel records",
-		"question": "query for retrieval or QA",
-		"paragraphs":[
-			{
-				"idx": "idx of documents",
-				"title": "title of document",
-				"paragraph_text": "text of document",
-				"is supporting": "true/false, whether the document is a target for retrieval",
-			},
-			{},
-			...
-		]
-	},
-	{},
-	...
+  {
+	"idx": "idx will be used to retrieve qrel records",
+	"question": "query for retrieval or QA",
+	"paragraphs":[
+	  {
+	    "idx": "idx of documents",
+		"title": "title of document",
+		"paragraph_text": "text of document",
+		"is supporting": "true/false, whether the document is a target for retrieval",
+	  },
+	  {},
+	]
+  },
+  {},
 ]
 ```
 ## Experiments
