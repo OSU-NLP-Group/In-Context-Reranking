@@ -1,7 +1,7 @@
 # In-Context-Reranking
 Code and data for paper [Attention in Large Language Models Yields Efficient Zero-Shot Re-Rankers](https://arxiv.org/abs/2410.02642).
 
-We present in-context re-ranking (ICR), an efficient re-ranking method that directly leverages the attention pattern of LLMs for zero-shot re-ranking. By reading the LLM’s mind, ICR dramatically cuts the complexity of re-ranking $N$ documents from $O(N)$~$O(N\log N)$ down to O(1) with better re-ranking performance, especially on more challenging tasks.
+We present in-context re-ranking (ICR), an efficient re-ranking method that directly leverages the attention pattern of LLMs for zero-shot re-ranking. By reading the LLM’s mind, ICR dramatically cuts the complexity of re-ranking $N$ documents from $O(N)$ ~ $O(N \log N)$ down to O(1) with better re-ranking performance, especially on more challenging tasks.
 
 ![](_asset/ICR_figure.png)
 
@@ -41,8 +41,8 @@ bash run_icr_multihop.sh
 ```
 
 
-## Adapt ICR to your own LLM
-As of this release, we implement ICR by reconstructing attention distributions from KV cache. Please refer to [this note](src/README.md) for details on how to adapt ICR to your own LLM.
+<!-- ## Adapt ICR to your own LLM
+As of this release, we implement ICR by reconstructing attention distributions from KV cache. Please refer to [this note](src/README.md) for details on how to adapt ICR to your own LLM. -->
 
 ## Citation
 If you find this work helpful, please consider citing our paper:
