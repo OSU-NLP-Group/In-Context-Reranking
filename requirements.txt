@@ -1,0 +1,13 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+accelerate=0.33.0=pypi_0
+beir=2.0.0=pypi_0
+bitsandbytes=0.43.3=pypi_0
+flash-attn=2.6.3=pypi_0
+numpy=1.26.3=pypi_0
+openai=1.44.1=pypi_0
+pyserini=0.37.0=pypi_0
+pytrec-eval=0.5=pypi_0
+torch=2.4.0=pypi_0
+transformers=4.44.1=pypi_0
