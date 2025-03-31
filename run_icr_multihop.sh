@@ -14,4 +14,5 @@ do
       --llm_name $LLM_NAME \
       --reverse_doc_order \
       --reranker icr \
+      --save_retrieval_results 
 done

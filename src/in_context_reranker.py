@@ -342,7 +342,9 @@ class InContextReranker():
                 kv_cache.value_cache[i] = kv_cache.value_cache[i][:,:,:query_start_idx,:]
             kv_cache._seen_tokens = query_start_idx
             
-            
+            if not self._use_fa2:
+                kv_cache = None
+                
             if kv_cache is not None:
                 context_start_idx=query_start_idx
             else:
@@ -374,6 +376,9 @@ class InContextReranker():
                 kv_cache.value_cache[i] = kv_cache.value_cache[i][:,:,:query_start_idx,:]
             kv_cache._seen_tokens = query_start_idx
             
+            if not self._use_fa2:
+                kv_cache = None
+                
             if kv_cache is not None:
                 context_start_idx=query_start_idx
             else:
